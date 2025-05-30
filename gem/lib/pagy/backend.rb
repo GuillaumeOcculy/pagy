@@ -1,11 +1,15 @@
 # See Pagy::Backend API documentation: https://ddnexus.github.io/pagy/docs/api/backend
 # frozen_string_literal: true
 
+require_relative 'url_helpers'
+
 class Pagy
   # Define a few generic methods to paginate a collection out of the box,
   # or any collection by overriding any of the `pagy_*` methods in your controller.
   # See also the extras if you need specialized methods to paginate Arrays or other collections
   module Backend
+    include UrlHelpers
+
     private
 
     # Return Pagy object and paginated results
